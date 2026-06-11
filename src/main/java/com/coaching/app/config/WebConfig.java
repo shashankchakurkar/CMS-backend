@@ -13,7 +13,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Allow CORS on all endpoints in our API
-                        .allowedOrigins("*") // Allow your local React Vite server
+                        .allowedOriginPatterns("*") // Allow your local React Vite server
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // HTTP methods to allow
                         .allowedHeaders("*") // Allow all headers
                         .allowCredentials(true);
