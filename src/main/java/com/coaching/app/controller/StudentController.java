@@ -20,4 +20,12 @@ public class StudentController {
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
+
+    public StudentRepository getStudentRepository() {
+        return studentRepository;
+    }
+    @GetMapping("/running")
+    public String getRunnning() {
+        return "backend server started ";
+    }
 }
